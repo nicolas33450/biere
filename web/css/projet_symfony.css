@@ -1,0 +1,4 @@
+body{
+    background: url(https://api.punkapi.com/v2/beers/random/image_url) center center no-repeat;
+    font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+
+
+{% block body %}
+
+<div class="container">    
+    <div class="row">
+        <div class="col-12 text-center">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut omnis dolore quis, corporis voluptatibus
+                harum, voluptatum possimus unde expedita esse sit impedit magni, voluptas voluptate doloribus tempore
+                explicabo modi ipsa.
+            </p>          
+        </div>        
+    </div>
+</div>
+{% endblock %}
+
+
+{% block stylesheets %}
+{{parent()}}
+<style>
+body{
+    background: url('{{reponse[0].image_url}}') center center repeat;    
+    font-family: 'Poppins', sans-serif;
+}
+</style>
+
+{% endblock %}

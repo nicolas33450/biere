@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %} Portfolio {% endblock %}
+
+{% block body %}
+
+{{dump(reponse)}}
+
+        <div class="container">
+            <div class="row">
+
+                {% for biere in reponse %}
+
+                    <div class="col-12 col-lg-4 text-center">
+                        {{biere.name}}<br />
+                        {{biere.tagline}}<br />
+                      <a href="{{path('article',{'id':biere.id})}}"><img src="{{biere.image_url}}" alt="" class="w-50 mb-5"></a><br/>                    
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}

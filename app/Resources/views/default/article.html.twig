@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %} Article {% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+
+        <div class=" col-12 col-lg-6 text-center">
+            <img src="{{reponse[0].image_url}}" alt="" class="w-25 mb-5">
+        </div>
+
+        <div class="col-12 col-lg-6 text-center">
+            {{dump(reponse[0])}}
+            <h1>{{reponse[0].name}}</h1><br><br>
+            {{reponse[0].description}}
+        </div>
+        <div class="col-12 text-center">
+            <h2> Ingredients </h2><br><br>
+            {% for ingredients in reponse[0].ingredients.malt %}
+            <div class="col-12 col-lg-8 text-center">
+                {{ingredients.name}}
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

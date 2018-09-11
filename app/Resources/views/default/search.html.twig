@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}search{% endblock %}
+
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            {% if search %}
+            Votre recherche : {{search}}<br>
+            {% if reponse %}
+            {{dump(reponse)}}
+            {% else %}
+            Pas de resultat
+            {% endif %}
+            {% else %}
+            il n'y pas de recherche
+            {% endif %}
+
+        </div>
+
+            {% for fiche in reponse %}
+
+            <div class="col-12 col-lg-4 text-center">
+                {{fiche.name}} <br>
+                <a href="{{path('article',{'id':fiche.id})}}"><img src="{{fiche.image_url}}" alt="" class="w-50 mb-5"></a><br />
+                {{fiche.tagline}}<br />
+            </div>
+            {% endfor %}
+
+
+
+    </div>
+</div>
+{% endblock %}
+
+
+{% block stylesheets %}
+{{parent()}}
+{% endblock %}
