@@ -1,13 +1,14 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col-12 text-center">
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-dark bg-dark">
                 <a class="navbar-brand active" href="{{path('homepage')}}"> Accueil </a>
                 <a class="navbar-brand" href="{{path('galerie')}}"> Galerie </a>
+                <a class="navbar-brand" href="{{path('inscription')}}"> Inscription </a>
                 <a class="navbar-brand" href="{{path('contact')}}"> Contact </a>
 
                 <form action="{{path('search')}}" method="GET">
-                    <input class="form-control" type="text" name="search">
+                    <input class="form" type="text" name="search">
                     <button class="btn btn-info text-center" type="submit"> Search </button>
                 </form>
             </nav>

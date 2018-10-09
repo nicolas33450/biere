@@ -9,13 +9,16 @@
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">
+
             {% if search %}
             Votre recherche : {{search}}<br>
-            {% if reponse %}
-            {{dump(reponse)}}
-            {% else %}
-            Pas de resultat
-            {% endif %}
+
+                {% if reponse %}            
+                {{dump(reponse)}}
+
+                {% else %}
+                Pas de resultat
+                {% endif %}
             {% else %}
             il n'y pas de recherche
             {% endif %}

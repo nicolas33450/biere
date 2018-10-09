@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="container">
+
+    <form action="{{path("modifClient",{'id':client.id})}}" method="post">
+
+        <div class="form-group">
+            <label > Nom </label>
+            <input value="{{client.nom}}" name="nom" type="text" class="form-control" placeholder="Nom" required>
+        </div>
+
+        <div class="form-group">
+            <label >Prenom</label>
+            <input value="{{client.prenom}}" name="prenom" type="text" class="form-control" placeholder="Prenom" required>
+        </div>
+
+        <div class="form-group">
+            <label f>Adresse</label>
+            <input value="{{client.adresse}}" name="adresse" type="text" class="form-control" placeholder="Adresse" required>
+        </div>
+
+        <div class="form-group">
+            <label >CP</label>
+            <input value="{{client.cp}}" name="cp" type="text" class="form-control" placeholder="Cp" required>
+        </div>
+
+        <div class="form-group">
+            <label >Ville</label>
+            <input value="{{client.ville}}" name="ville" type="text" class="form-control" placeholder="Ville" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input value="{{client.email}}" name="email" type="eamil" class="form-control" placeholder="Email" required>
+        </div>
+        <button type="submit" class="btn btn-info m-3">Modifier</button>
+    </form>    
+</div>
+{% endblock %}
